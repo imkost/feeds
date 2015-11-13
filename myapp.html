@@ -1,0 +1,16 @@
+<head>
+  <title>myapp</title>
+</head>
+
+<body>
+  Feeds:
+  {{> Feeds userId=1}}
+</body>
+
+<template name="Feeds">
+  <ul>
+    {{#each feed in feeds}}
+      <li>{{feed._id}} [{{feed.lastActivity}}]</li>
+    {{/each}}
+  </ul>
+</template>
